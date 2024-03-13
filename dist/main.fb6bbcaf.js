@@ -5495,10 +5495,6 @@ var gsapWithCSS = exports.default = exports.gsap = _gsapCore.gsap.registerPlugin
 },{"./gsap-core.js":"node_modules/gsap/gsap-core.js","./CSSPlugin.js":"node_modules/gsap/CSSPlugin.js"}],"js/main.js":[function(require,module,exports) {
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
 var _gsap = require("gsap");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -5506,7 +5502,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-var TodoList = exports.default = /*#__PURE__*/function () {
+var TodoList = /*#__PURE__*/function () {
   function TodoList() {
     _classCallCheck(this, TodoList);
     this.todos = [];
@@ -5630,6 +5626,11 @@ var TodoList = exports.default = /*#__PURE__*/function () {
   }]);
   return TodoList;
 }();
+var TodoItem = /*#__PURE__*/_createClass(function TodoItem(text) {
+  _classCallCheck(this, TodoItem);
+  this.text = text;
+});
+var todoList = new TodoList();
 },{"gsap":"node_modules/gsap/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -5655,7 +5656,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54300" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49737" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
